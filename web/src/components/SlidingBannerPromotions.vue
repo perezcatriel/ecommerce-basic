@@ -1,8 +1,8 @@
 <template>
   <div class="banner">
-    <div class="overflow-hidden h-full">
-      <div class="animate-slide whitespace-nowrap">
-        <span v-for="offer in offers" :key="offer.id" class="inline-block mx-10">
+    <div class="banner__inner">
+      <div class="banner__slider banner__slider--animate">
+        <span v-for="offer in offers" :key="offer.id" class="banner__offer">
           {{ offer.text }}
         </span>
       </div>
@@ -25,25 +25,34 @@ export default {
 
 <style scoped>
 .banner {
-  background-color: var(--background-color);
+  background-color: var(--arena-dorada);
   height: 40px;
   top: 0;
   position: fixed;
   width: 100vw;
   z-index: 100;
-  color: var(--font-dark);
+  color: var(--);
   font-family: var(--font-ligth);
 }
 
-.overflow-hidden {
+.banner__inner {
   overflow: hidden;
 }
 
-.whitespace-nowrap {
-  white-space: nowrap;
+.banner__slider {
+  animation: banner__slide 20s linear infinite;
 }
 
-@keyframes slide {
+.banner__slider--animate {
+  animation: banner__slide 20s linear infinite;
+}
+
+.banner__offer {
+  display: inline-block;
+  margin: 10px;
+}
+
+@keyframes banner__slide {
   0% {
     transform: translateX(80%);
   }
@@ -51,9 +60,5 @@ export default {
   100% {
     transform: translateX(-80%);
   }
-}
-
-.animate-slide {
-  animation: slide 20s linear infinite;
 }
 </style>
