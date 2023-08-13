@@ -1,0 +1,21 @@
+:root {
+    /* background color */
+    --background-color: #F0F7F7;
+    /* text color */
+    --font-dark: #333333;
+    --font-ligth: #999999;
+    /* secundary colors */
+    --verde-botanico: #2A9D8F;
+    --naranja-calido: #E76F51;
+    --morado-mistico: #6A4C93;
+    --blanco-puro: #FFFFFF;
+    /* primaries colors*/
+    --turquesa-magico: #00B3A0;
+    --arena-dorada: #E9C46A;
+    --rosa-encantado: #F4A261;
+    --azul-sereno: #577590;
+    /* fonts */
+    --font-cursive: "Style Script";
+    --font-fit: Oswald;
+    --font-ligth: Roboto;
+}
