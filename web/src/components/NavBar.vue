@@ -30,6 +30,7 @@ export default {
 h1 {
   font-family: var(--font-cursive);
   font-size: 2.5rem;
+  color: var(--verde-botanico);
 }
 
 .navbar__menu,
