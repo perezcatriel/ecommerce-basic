@@ -1,57 +1,34 @@
 :root {
-<<<<<<< HEAD
-    /* background color */
-    --background-color: #F0F7F7;
-    /* text color */
-    --font-dark: #333333;
-    --font-ligth: #999999;
-    /* secundary colors */
-    --verde-botanico: #2A9D8F;
-    --naranja-calido: #E76F51;
-    --morado-mistico: #6A4C93;
-    --blanco-puro: #FFFFFF;
-    /* primaries colors*/
-    --turquesa-magico: #00B3A0;
-    --arena-dorada: #E9C46A;
-    --rosa-encantado: #F4A261;
-    --azul-sereno: #577590;
-    /* fonts */
-    --font-cursive: "Style Script";
-    --font-fit: Oswald;
-    --font-fine: Roboto;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--background-color);
-    font-family: var(--font-fine);
-    color: var(--font-dark);
-    font-size: 16
-}
-=======
   /* background color */
-  --background-color: #f0f7f7;
+  --background-color: #F0F7F7;
   /* text color */
   --font-dark: #333333;
   --font-ligth: #999999;
   /* secundary colors */
-  --verde-botanico: #2a9d8f;
-  --naranja-calido: #e76f51;
-  --morado-mistico: #6a4c93;
-  --blanco-puro: #ffffff;
+  --verde-botanico: #2A9D8F;
+  --naranja-calido: #E76F51;
+  --morado-mistico: #6A4C93;
+  --blanco-puro: #FFFFFF;
   /* primaries colors*/
-  --turquesa-magico: #00b3a0;
-  --arena-dorada: #e9c46a;
-  --rosa-encantado: #f4a261;
+  --turquesa-magico: #00B3A0;
+  --arena-dorada: #E9C46A;
+  --rosa-encantado: #F4A261;
   --azul-sereno: #577590;
   /* fonts */
   --font-cursive: "Style Script";
   --font-fit: Oswald;
   --font-fine: Roboto;
 }
->>>>>>> 98ba7d005fd09a658e82e44986a0c17951c29299
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-fine);
+  color: var(--font-dark);
+  font-size: 16
+}
