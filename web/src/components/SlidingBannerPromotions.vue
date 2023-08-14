@@ -31,11 +31,12 @@ export default {
   position: fixed;
   width: 100vw;
   z-index: 100;
-  color: var(--);
-  font-family: var(--font-ligth);
+  color: var(--font-dark);
+  font-family: var(--font-fine);
 }
 
 .banner__inner {
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -54,11 +55,11 @@ export default {
 
 @keyframes banner__slide {
   0% {
-    transform: translateX(80%);
+    transform: translateX(100%);
   }
 
   100% {
-    transform: translateX(-80%);
+    transform: translateX(-120%);
   }
 }
 </style>
