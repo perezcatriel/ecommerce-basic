@@ -30,7 +30,6 @@ export default {
 h1 {
   font-family: var(--font-cursive);
   font-size: 2.5rem;
-
 }
 
 .navbar__menu,
