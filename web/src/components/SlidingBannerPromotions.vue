@@ -25,14 +25,14 @@ export default {
 
 <style scoped>
 .banner {
-  background-color: var(--background-color);
+  background-color: var(--rosa-encantado);
   height: 40px;
   top: 0;
   position: fixed;
   width: 100vw;
   z-index: 100;
   color: var(--font-dark);
-  font-family: var(--font-ligth);
+  font-family: var(--font-fine);
 }
 
 .overflow-hidden {

@@ -17,5 +17,18 @@
     /* fonts */
     --font-cursive: "Style Script";
     --font-fit: Oswald;
-    --font-ligth: Roboto;
+    --font-fine: Roboto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-fine);
+    color: var(--font-dark);
+    font-size: 16
 }
