@@ -25,11 +25,7 @@ export default {
 
 <style scoped>
 .banner {
-<<<<<<< HEAD
-  background-color: var(--rosa-encantado);
-=======
   background-color: var(--arena-dorada);
->>>>>>> 98ba7d005fd09a658e82e44986a0c17951c29299
   height: 40px;
   top: 0;
   position: fixed;
