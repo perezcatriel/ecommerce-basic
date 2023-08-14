@@ -1,17 +1,20 @@
 <template>
   <SlidingBannerPromotions />
   <NavBar />
+  <PresentationCarousel />
 </template>
 
 <script>
 import SlidingBannerPromotions from './components/SlidingBannerPromotions.vue';
 import NavBar from './components/NavBar.vue';
+import PresentationCarousel from './components/PresentationCarousel.vue';
 
 export default {
   name: 'App',
   components: {
     SlidingBannerPromotions,
     NavBar,
+    PresentationCarousel,
   },
 };
 </script >
