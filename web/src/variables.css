@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
     /* background color */
     --background-color: #F0F7F7;
     /* text color */
@@ -32,3 +33,25 @@ body {
     color: var(--font-dark);
     font-size: 16
 }
+=======
+  /* background color */
+  --background-color: #f0f7f7;
+  /* text color */
+  --font-dark: #333333;
+  --font-ligth: #999999;
+  /* secundary colors */
+  --verde-botanico: #2a9d8f;
+  --naranja-calido: #e76f51;
+  --morado-mistico: #6a4c93;
+  --blanco-puro: #ffffff;
+  /* primaries colors*/
+  --turquesa-magico: #00b3a0;
+  --arena-dorada: #e9c46a;
+  --rosa-encantado: #f4a261;
+  --azul-sereno: #577590;
+  /* fonts */
+  --font-cursive: "Style Script";
+  --font-fit: Oswald;
+  --font-fine: Roboto;
+}
+>>>>>>> 98ba7d005fd09a658e82e44986a0c17951c29299

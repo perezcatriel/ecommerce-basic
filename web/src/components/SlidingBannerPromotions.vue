@@ -1,8 +1,8 @@
 <template>
   <div class="banner">
-    <div class="overflow-hidden h-full">
-      <div class="animate-slide whitespace-nowrap">
-        <span v-for="offer in offers" :key="offer.id" class="inline-block mx-10">
+    <div class="banner__inner">
+      <div class="banner__slider banner__slider--animate">
+        <span v-for="offer in offers" :key="offer.id" class="banner__offer">
           {{ offer.text }}
         </span>
       </div>
@@ -25,7 +25,11 @@ export default {
 
 <style scoped>
 .banner {
+<<<<<<< HEAD
   background-color: var(--rosa-encantado);
+=======
+  background-color: var(--arena-dorada);
+>>>>>>> 98ba7d005fd09a658e82e44986a0c17951c29299
   height: 40px;
   top: 0;
   position: fixed;
@@ -35,25 +39,31 @@ export default {
   font-family: var(--font-fine);
 }
 
-.overflow-hidden {
+.banner__inner {
+  white-space: nowrap;
   overflow: hidden;
 }
 
-.whitespace-nowrap {
-  white-space: nowrap;
+.banner__slider {
+  animation: banner__slide 20s linear infinite;
 }
 
-@keyframes slide {
+.banner__slider--animate {
+  animation: banner__slide 20s linear infinite;
+}
+
+.banner__offer {
+  display: inline-block;
+  margin: 10px;
+}
+
+@keyframes banner__slide {
   0% {
-    transform: translateX(80%);
+    transform: translateX(100%);
   }
 
   100% {
-    transform: translateX(-80%);
+    transform: translateX(-120%);
   }
-}
-
-.animate-slide {
-  animation: slide 20s linear infinite;
 }
 </style>
