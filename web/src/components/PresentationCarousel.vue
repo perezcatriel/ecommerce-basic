@@ -2,19 +2,19 @@
   <div class="carousel-container">
     <div class="card">
       <img :src="items[currentIndex].image" alt="Imagen de la tarjeta" class="card-image" />
+      <div class="slider-container">
+        <div v-for="(item, index) in items" :key="item.id" :class="['slider',
+          { active: index === currentIndex }
+        ]" @click="goToSlide(index)" @keydown.enter="goToSlide(index)" tabindex="0">
+        </div>
+      </div>
       <h3 class="card-title">{{ items[currentIndex].name }}</h3>
       <p class="card-description">{{ items[currentIndex].description }}</p>
     </div>
-
-    <div>
-      <button @click="prevCard">Anterior</button>
-      <button @click="nextCard">Siguiente</button>
-    </div>
-
-    <div>
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+    <div class="icons">
+      <img src="../assets/icons/shop.png" alt="icon 1">
+      <img src="../assets/icons/shop.png" alt="icon 2">
+      <img src="../assets/icons/shop.png" alt="icon 3">
     </div>
   </div>
 </template>
@@ -36,13 +36,13 @@ export default {
         },
         {
           id: 2,
-          image: '../assets/images/image-example.webp',
+          image: '../assets/images/image-example-2.webp',
           name: 'Nombre 2',
           description: 'Descripción 2',
         },
         {
           id: 3,
-          image: '../assets/images/image-example.webp',
+          image: '../assets/images/image-example-3.webp',
           name: 'Nombre 3',
           description: 'Descripción 3',
         },
@@ -57,26 +57,19 @@ export default {
   },
   methods: {
     nextCard() {
-      if (this.currentIndex < this.items.length - 1) {
-        // eslint-disable-next-line no-plusplus
-        this.currentIndex++;
-      } else {
-        this.currentIndex = 0;
-      }
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
     },
     prevCard() {
-      if (this.currentIndex > 0) {
-        // eslint-disable-next-line no-plusplus
-        this.currentIndex--;
-      } else {
-        this.currentIndex = this.items.length - 1;
-      }
+      this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
     },
     startAutoSlide() {
       this.autoSlideInterval = setInterval(this.nextCard, 3000); // Cambia cada 3 segundos
     },
     stopAutoSlide() {
       clearInterval(this.autoSlideInterval);
+    },
+    goToSlide(index) {
+      this.currentIndex = index;
     },
   },
 };
@@ -98,7 +91,6 @@ export default {
   width: 100vw;
   height: 40vh;
   object-fit: cover;
-
 }
 
 .card-title,
@@ -106,30 +98,36 @@ export default {
   margin: 10px;
 }
 
-button {
-  position: relative;
-  top: -130px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 5px;
+.slider-container {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  z-index: 50;
+}
+
+.slider {
+  width: 50px;
+  height: 10px;
+  background-color: var(--font-ligth);
+  margin: 0 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #f0f0f0;
+.slider.active {
+  background-color: var(--font-dark);
 }
 
-button:disabled {
-  background-color: #eee;
-  cursor: not-allowed;
+.icons {
+  background-color: var(--background-color);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-button:nth-of-type(1) {
-  left: -60px;
-}
-
-button:nth-of-type(2) {
-  right: -60px;
+.icons img {
+  margin: 10px;
 }
 </style>
