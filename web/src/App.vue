@@ -4,6 +4,9 @@
   <PresentationCarousel />
   <NewlyArrivedProducts />
   <NewCollections />
+  <NewlyArrivedProducts />
+  <OurShop />
+  <WhatsApp />
 </template>
 
 <script>
@@ -12,6 +15,8 @@ import NavBar from './components/NavBar.vue';
 import PresentationCarousel from './components/PresentationCarousel.vue';
 import NewlyArrivedProducts from './components/NewlyArrivedProducts.vue';
 import NewCollections from './components/NewCollections.vue';
+import OurShop from './components/OurShop.vue';
+import WhatsApp from './components/WhatsApp.vue';
 
 export default {
   name: 'App',
@@ -21,6 +26,8 @@ export default {
     PresentationCarousel,
     NewlyArrivedProducts,
     NewCollections,
+    OurShop,
+    WhatsApp,
   },
 };
 </script >
