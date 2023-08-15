@@ -2,12 +2,14 @@
   <SlidingBannerPromotions />
   <NavBar />
   <PresentationCarousel />
+  <NewlyArrivedProducts />
 </template>
 
 <script>
 import SlidingBannerPromotions from './components/SlidingBannerPromotions.vue';
 import NavBar from './components/NavBar.vue';
 import PresentationCarousel from './components/PresentationCarousel.vue';
+import NewlyArrivedProducts from './components/NewlyArrivedProducts.vue';
 
 export default {
   name: 'App',
@@ -15,6 +17,7 @@ export default {
     SlidingBannerPromotions,
     NavBar,
     PresentationCarousel,
+    NewlyArrivedProducts,
   },
 };
 </script >
