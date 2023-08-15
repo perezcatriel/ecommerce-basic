@@ -10,7 +10,9 @@
       </div>
       <h3 class="card-title">{{ items[currentIndex].name }}</h3>
       <p class="card-description">{{ items[currentIndex].description }}</p>
+      <button>VER TODO</button>
     </div>
+
     <div class="icons">
       <img src="../assets/icons/shop.png" alt="icon 1">
       <img src="../assets/icons/shop.png" alt="icon 2">
@@ -98,6 +100,13 @@ export default {
   margin: 10px;
 }
 
+button {
+  padding: 10px;
+  width: 90vw;
+  background-color: var(--arena-dorada);
+  margin-bottom: 20px;
+}
+
 .slider-container {
 
   display: flex;
@@ -125,6 +134,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .icons img {
