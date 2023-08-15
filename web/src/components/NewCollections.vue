@@ -31,7 +31,9 @@
         <div v-for="(item, index) in items_3" :key="index">
           <div class="image">
             <img :src="item.image" alt="item.name" class="image-3">
+            <h2 class="image-name">{{ item.name }}</h2>
           </div>
+
         </div>
       </div>
     </div>
@@ -69,12 +71,12 @@ export default {
       ],
       items_3: [
         {
-          name: 'Producto 4',
+          name: 'Producto',
           description: 'descripción del producto',
           image: 'https://picsum.photos/id/100/200/300',
         },
         {
-          name: 'Producto 4',
+          name: 'Producto',
           description: 'descripción del producto',
           image: 'https://picsum.photos/id/100/200/300',
         },
@@ -130,5 +132,13 @@ p {
 
 .image-3 {
   width: 44vw;
+}
+
+.image-name {
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 60px;
+  z-index: 10;
+  padding: 0 25px;
 }
 </style>
