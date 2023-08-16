@@ -6,6 +6,8 @@
   <NewCollections />
   <NewlyArrivedProducts />
   <OurShop />
+  <CategoryShop />
+  <ContactUs />
   <WhatsApp />
 </template>
 
@@ -16,6 +18,8 @@ import PresentationCarousel from './components/PresentationCarousel.vue';
 import NewlyArrivedProducts from './components/NewlyArrivedProducts.vue';
 import NewCollections from './components/NewCollections.vue';
 import OurShop from './components/OurShop.vue';
+import CategoryShop from './components/CategoryShop.vue';
+import ContactUs from './components/ContactUs.vue';
 import WhatsApp from './components/WhatsApp.vue';
 
 export default {
@@ -27,6 +31,8 @@ export default {
     NewlyArrivedProducts,
     NewCollections,
     OurShop,
+    CategoryShop,
+    ContactUs,
     WhatsApp,
   },
 };
