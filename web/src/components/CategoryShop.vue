@@ -20,25 +20,25 @@
 
 <script>
 export default {
-    name: 'CategoryShop',
-    data() {
-        return {
-            items_1: [
-                {
-                    name: 'Estética',
-                    image: 'https://picsum.photos/id/100/200/300',
-                },
-                {
-                    name: 'Magia',
-                    image: 'https://picsum.photos/id/100/200/300',
-                },
-            ],
-            items_2: {
-                name: 'Ropa',
-                image: 'https://picsum.photos/id/100/400/300', // Cambié el ancho de la imagen para que cubra el ancho completo
-            },
-        };
-    },
+  name: 'CategoryShop',
+  data() {
+    return {
+      items_1: [
+        {
+          name: 'Estética',
+          image: 'https://picsum.photos/id/100/200/300',
+        },
+        {
+          name: 'Magia',
+          image: 'https://picsum.photos/id/100/200/300',
+        },
+      ],
+      items_2: {
+        name: 'Ropa',
+        image: 'https://picsum.photos/id/100/400/300', // Cambié el ancho de la imagen para que cubra el ancho completo
+      },
+    };
+  },
 };
 </script>
 
