@@ -92,6 +92,7 @@ export default {
   width: 20px;
   height: 20px;
   color: var(--background-color);
+  text-decoration: none;
 }
 
 .social-name {
