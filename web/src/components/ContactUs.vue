@@ -96,7 +96,7 @@ export default {
 }
 
 .social-name {
-  color: var(--background-color);
+  color: var(--arena-dorada);
   padding-left: 10px;
 }
 
@@ -116,5 +116,7 @@ export default {
 
 .rights a {
   color: var(--arena-dorada);
+  text-decoration: none;
+
 }
 </style>
