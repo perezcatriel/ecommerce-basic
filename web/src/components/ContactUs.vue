@@ -85,6 +85,7 @@ export default {
 .social a {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .social-link,
@@ -92,12 +93,12 @@ export default {
   width: 20px;
   height: 20px;
   color: var(--background-color);
-  text-decoration: none;
 }
 
 .social-name {
   color: var(--arena-dorada);
   padding-left: 10px;
+
 }
 
 .cards-container {
