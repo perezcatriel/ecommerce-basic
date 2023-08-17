@@ -109,11 +109,7 @@ export default {
   margin: 0;
 }
 
-h2 {
-  color: var(--blanco-puro);
-  text-shadow: 1px 1px var(--font-dark);
-}
-
+h2,
 p {
   color: var(--blanco-puro);
   text-shadow: 1px 1px var(--font-dark);

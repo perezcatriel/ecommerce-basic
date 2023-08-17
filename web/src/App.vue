@@ -7,6 +7,7 @@
   <NewlyArrivedProducts />
   <OurShop />
   <CategoryShop />
+  <MyJournal />
   <ContactUs />
   <WhatsApp />
 </template>
@@ -20,6 +21,7 @@ import NewCollections from './components/NewCollections.vue';
 import OurShop from './components/OurShop.vue';
 import CategoryShop from './components/CategoryShop.vue';
 import ContactUs from './components/ContactUs.vue';
+import MyJournal from './components/MyJournal.vue';
 import WhatsApp from './components/WhatsApp.vue';
 
 export default {
@@ -32,6 +34,7 @@ export default {
     NewCollections,
     OurShop,
     CategoryShop,
+    MyJournal,
     ContactUs,
     WhatsApp,
   },
