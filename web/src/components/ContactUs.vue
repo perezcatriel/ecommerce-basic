@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contact-us">
     <div class="social-container">
       <div v-for="(item, index) in social" :key="index" class="social">
         <a :href="item.link" target="_blank">
@@ -98,7 +98,6 @@ export default {
 .social-name {
   color: var(--arena-dorada);
   padding-left: 10px;
-
 }
 
 .cards-container {
@@ -118,6 +117,5 @@ export default {
 .rights a {
   color: var(--arena-dorada);
   text-decoration: none;
-
 }
 </style>

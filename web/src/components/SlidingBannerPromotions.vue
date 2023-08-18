@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       offers: [
-        { id: 1, text: 'Promo! Aprovecha tu primer compra online con descuento 50%' },
+        { id: 1, text: 'Comienza la Primavera!🌻 comienza el calor!🏖️ tenes tú bikini de Mar de Cores?👙' },
       ],
     };
   },

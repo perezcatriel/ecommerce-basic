@@ -10,14 +10,13 @@
       </div>
       <h3 class="card-title">{{ items[currentIndex].name }}</h3>
       <p class="card-description">{{ items[currentIndex].description }}</p>
+      <div class="icons">
+        <img v-for="(icon, iconIndex) in icons" :key="iconIndex" :src="icon.image" :alt="icon.name"
+          :style="{ opacity: activeIcon === iconIndex ? 1 : 0.2 }" @click="goToSlide(iconIndex)" tabindex="0" />
+      </div>
       <button>VER TODO</button>
     </div>
 
-    <div class="icons">
-      <img src="../assets/icons/shop.png" alt="icon 1">
-      <img src="../assets/icons/shop.png" alt="icon 2">
-      <img src="../assets/icons/shop.png" alt="icon 3">
-    </div>
   </div>
 </template>
 
@@ -27,28 +26,52 @@ export default {
   data() {
     return {
       currentIndex: 0,
+      activeIcon: 0,
       autoSlideInterval: null,
       items: [
         {
           id: 1,
           // eslint-disable-next-line global-require
-          image: '../assets/images/image-example.webp',
-          name: 'Nombre 1',
-          description: 'Descripción 1',
+          image: 'https://i.ibb.co/Sm18g3t/ropa-bota.jpg',
+          name: 'Bota goma Ecológica',
+          description: 'Estilo, comodidad bajo la lluvia',
+          category: 'Ropa',
         },
         {
           id: 2,
-          image: '../assets/images/image-example-2.webp',
-          name: 'Nombre 2',
-          description: 'Descripción 2',
+          image: 'https://i.ibb.co/zbgP4xx/estetica-servicios.jpg',
+          name: 'Servicios de Estética',
+          description: 'Cuidate y mimate en Mar de Cores',
+          category: 'Estética',
         },
         {
           id: 3,
-          image: '../assets/images/image-example-3.webp',
-          name: 'Nombre 3',
-          description: 'Descripción 3',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
+          name: 'Buda Cabeza',
+          description: 'Sabiduria, tranquilidad y paciencia',
+          category: 'Magia',
         },
       ],
+      icons: [
+        {
+          name: 'Ropa',
+          image: 'https://i.ibb.co/F41JH1d/marde-caracol-azul.jpg',
+        },
+        {
+          name: 'Estética',
+          image: 'https://i.ibb.co/jzryk0c/marde-caracol-rosa.jpg',
+        },
+        {
+          name: 'Magia',
+          image: 'https://i.ibb.co/MRsBynT/mardecores-caracol-naranja.jpg',
+        },
+      ],
+      categoryToIcon: {
+        Ropa: 0, // Índice del ícono de 'Ropa' en la matriz 'icons'
+        Estética: 1, // Índice del ícono de 'Estética' en la matriz 'icons'
+        Magia: 2, // Índice del ícono de 'Magia' en la matriz 'icons'
+        // Agrega más categorías e índices según sea necesario
+      },
     };
   },
   created() {
@@ -65,14 +88,21 @@ export default {
       this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
     },
     startAutoSlide() {
-      this.autoSlideInterval = setInterval(this.nextCard, 3000); // Cambia cada 3 segundos
+      this.autoSlideInterval = setInterval(() => {
+        this.nextCard();
+        const currentCategory = this.items[this.currentIndex].category;
+        this.activeIcon = this.categoryToIcon[currentCategory];
+      }, 3000);
     },
     stopAutoSlide() {
       clearInterval(this.autoSlideInterval);
     },
     goToSlide(index) {
       this.currentIndex = index;
+      const currentCategory = this.items[index].category;
+      this.activeIcon = this.categoryToIcon[currentCategory];
     },
+
   },
 };
 </script>
@@ -92,7 +122,7 @@ export default {
 .card-image {
   width: 100vw;
   height: 40vh;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .card-title,
@@ -139,5 +169,7 @@ button {
 
 .icons img {
   margin: 10px;
+  width: 40px;
+  height: 40px;
 }
 </style>
