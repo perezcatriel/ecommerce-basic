@@ -12,7 +12,8 @@
       <p class="card-description">{{ items[currentIndex].description }}</p>
       <div class="icons">
         <img v-for="(icon, iconIndex) in icons" :key="iconIndex" :src="icon.image" :alt="icon.name"
-          :style="{ opacity: activeIcon === iconIndex ? 1 : 0.2 }" @click="goToSlide(iconIndex)" tabindex="0" />
+          :style="{ opacity: activeIcon === iconIndex ? 1 : 0.2 }" @click="goToSlide(iconIndex)"
+          @keydown.enter="goToSlide(index)" tabindex="0" />
       </div>
       <button>VER TODO</button>
     </div>
