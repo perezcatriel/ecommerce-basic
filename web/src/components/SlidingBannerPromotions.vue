@@ -12,13 +12,13 @@
 
 <script>
 export default {
-  name: 'SlidingBannerPromotions',
+  name: "SlidingBannerPromotions",
   data() {
     return {
       offers: [
         {
           id: 1,
-          text: 'Comienza la Primavera!🌻 comienza el calor!🏖️ tenes tú bikini de Mar de Cores?👙',
+          text: "Comienza la Primavera!🌻 comienza el calor!🏖️ tenes tú bikini de Mar de Cores?👙",
         },
       ],
     };
@@ -68,19 +68,13 @@ export default {
 
 @media (min-width: 768px) {
   .banner {
-    height: 20vh;
+    height: 30px;
   }
   .banner__offer {
     font-size: 2rem;
   }
   .banner__slider--animate {
     animation: banner__slide 30s linear infinite;
-  }
-}
-
-@media (min-width: 1028px) {
-  .banner {
-    height: 10vh;
   }
 }
 </style>
