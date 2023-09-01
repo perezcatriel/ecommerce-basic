@@ -48,7 +48,7 @@ h1 {
 
 @media (min-width: 768px) {
   .navbar {
-    margin-top: 10vh;
+    margin-top: 80px;
   }
 
   h1 {
