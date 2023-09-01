@@ -28,7 +28,7 @@ export default {
 
 h1 {
   font-family: var(--font-cursive);
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--verde-botanico);
 }
 
@@ -49,6 +49,14 @@ h1 {
 @media (min-width: 768px) {
   .navbar {
     margin-top: 8vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  img {
+    padding: 0 10px;
   }
 }
 </style>

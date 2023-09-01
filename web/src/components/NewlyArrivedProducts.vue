@@ -1,22 +1,44 @@
 <template>
-  <h2>Recién llegado</h2>
-  <div class="cards">
-    <div v-for="(item, index) in items" :key="index">
-      <figure>
-        <div class="image-container">
-          <img :src="item.image" :alt="item.name" class="image">
-          <a>
-            <img src="@/assets/icons/shop.png" :alt="item.name" class="icon">
-          </a>
-        </div>
+  <div class="center-container">
+    <h2>Recién llegado</h2>
 
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-        <figcaption>{{ item.price }}</figcaption>
-      </figure>
+    <div class="cards-container">
+      <div class="card-row">
+        <div v-for="(item, index) in items.slice(0, 2)" :key="index" class="card">
+          <figure>
+            <div class="image-container">
+              <img :src="item.image" :alt="item.name" class="image" />
+              <a>
+                <img src="@/assets/icons/shop.png" :alt="item.name" class="icon" />
+              </a>
+            </div>
+
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <figcaption>{{ item.price }}</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="card-row">
+        <div v-for="(item, index) in items.slice(2, 4)" :key="index" class="card">
+          <figure>
+            <div class="image-container">
+              <img :src="item.image" :alt="item.name" class="image" />
+              <a>
+                <img src="@/assets/icons/shop.png" :alt="item.name" class="icon" />
+              </a>
+            </div>
+
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <figcaption>{{ item.price }}</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
+
+    <a href="#contact-us"><button>VER TODO</button></a>
   </div>
-  <button>VER TODO</button>
 </template>
 
 <script>
@@ -31,29 +53,25 @@ export default {
           name: 'Producto 1',
           description: 'aqui va la descripcion breve del producto',
           price: 1000000,
-          image: 'https://picsum.photos/id/100/200/300',
-
+          image: 'https://i.ibb.co/447b8SH/ropa-pinza.jpg',
         },
         {
           name: 'Producto 2',
           description: 'aqui va la descripcion breve del producto',
           price: 1000000,
-          image: 'https://picsum.photos/id/100/200/300',
-
+          image: 'https://i.ibb.co/PmcD3zH/ropa-arito-estrellas.jpg',
         },
         {
           name: 'Producto 3',
           description: 'aqui va la descripcion breve del producto',
           price: 1000000,
-          image: 'https://picsum.photos/id/100/200/300',
-
+          image: 'https://i.ibb.co/T2s6jjS/ropa-brazalete.jpg',
         },
         {
           name: 'Producto 4',
           description: 'aqui va la descripcion breve del producto',
           price: 1000000,
-          image: 'https://picsum.photos/id/100/200/300',
-
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
       ],
     };
@@ -70,13 +88,27 @@ export default {
 </script>
 
 <style scoped>
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 10px;
-  padding: 10px;
-  margin: auto;
-  width: 90vw;
+.center-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  margin-top: 20px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 0 10px; /* Espacio entre las tarjetas */
+  text-align: start;
 }
 
 figure {
@@ -93,7 +125,8 @@ figure {
 }
 
 img.image {
-  width: 40vw;
+  width: 100%; /* Ajusta el ancho de la imagen */
+  max-width: 300px; /* Limita el ancho máximo de la imagen */
 }
 
 img.icon {
@@ -108,6 +141,12 @@ button {
   padding: 10px;
   width: 90vw;
   background-color: var(--arena-dorada);
-  margin-bottom: 20px;
+  margin: 20px auto; /* Centra horizontalmente */
+}
+
+@media (min-width: 768px) {
+  img.image {
+    max-width: 600px;
+  }
 }
 </style>

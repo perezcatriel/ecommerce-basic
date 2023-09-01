@@ -3,21 +3,31 @@
     <div class="card">
       <img :src="items[currentIndex].image" alt="Imagen de la tarjeta" class="card-image" />
       <div class="slider-container">
-        <div v-for="(item, index) in items" :key="item.id" :class="['slider',
-          { active: index === currentIndex }
-        ]" @click="goToSlide(index)" @keydown.enter="goToSlide(index)" tabindex="0">
-        </div>
+        <div
+          v-for="(item, index) in items"
+          :key="item.id"
+          :class="['slider', { active: index === currentIndex }]"
+          @click="goToSlide(index)"
+          @keydown.enter="goToSlide(index)"
+          tabindex="0"
+        ></div>
       </div>
       <h3 class="card-title">{{ items[currentIndex].name }}</h3>
       <p class="card-description">{{ items[currentIndex].description }}</p>
       <div class="icons">
-        <img v-for="(icon, iconIndex) in icons" :key="iconIndex" :src="icon.image" :alt="icon.name"
-          :style="{ opacity: activeIcon === iconIndex ? 1 : 0.2 }" @click="goToSlide(iconIndex)"
-          @keydown.enter="goToSlide(index)" tabindex="0" />
+        <img
+          v-for="(icon, iconIndex) in icons"
+          :key="iconIndex"
+          :src="icon.image"
+          :alt="icon.name"
+          :style="{ opacity: activeIcon === iconIndex ? 1 : 0.2 }"
+          @click="goToSlide(iconIndex)"
+          @keydown.enter="goToSlide(index)"
+          tabindex="0"
+        />
       </div>
-      <button>VER TODO</button>
+      <a href="#contact-us"><button>VER TODO</button></a>
     </div>
-
   </div>
 </template>
 
@@ -103,7 +113,6 @@ export default {
       const currentCategory = this.items[index].category;
       this.activeIcon = this.categoryToIcon[currentCategory];
     },
-
   },
 };
 </script>
@@ -112,12 +121,6 @@ export default {
 .carousel-container {
   width: 100vw;
   margin: auto;
-}
-
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .card-image {
@@ -139,7 +142,6 @@ button {
 }
 
 .slider-container {
-
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -173,5 +175,27 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  /* Desktop and above */
+  .card-image {
+    width: 60vw; /* Ajusta el ancho de la imagen de la tarjeta */
+    height: 50vh; /* Ajusta la altura de la imagen de la tarjeta si es necesario */
+  }
+
+  .card {
+    width: 60vw; /* Ajusta el ancho de toda la tarjeta */
+    margin: auto; /* Centra la tarjeta horizontalmente */
+  }
+
+  .card-title,
+  .card-description {
+    margin: 20px; /* Aumenta el margen para mejorar la visualización */
+  }
+
+  button {
+    width: 60vw; /* Ajusta el ancho del botón */
+  }
 }
 </style>
