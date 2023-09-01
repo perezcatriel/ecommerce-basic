@@ -13,19 +13,19 @@
 </template>
 
 <script>
-import SlidingBannerPromotions from './components/SlidingBannerPromotions.vue';
-import NavBar from './components/NavBar.vue';
-import PresentationCarousel from './components/PresentationCarousel.vue';
-import NewlyArrivedProducts from './components/NewlyArrivedProducts.vue';
-import NewCollections from './components/NewCollections.vue';
-import OurShop from './components/OurShop.vue';
-import CategoryShop from './components/CategoryShop.vue';
-import ContactUs from './components/ContactUs.vue';
-import MyJournal from './components/MyJournal.vue';
-import WhatsApp from './components/WhatsApp.vue';
+import SlidingBannerPromotions from "./components/SlidingBannerPromotions.vue";
+import NavBar from "./components/NavBar.vue";
+import PresentationCarousel from "./components/PresentationCarousel.vue";
+import NewlyArrivedProducts from "./components/NewlyArrivedProducts.vue";
+import NewCollections from "./components/NewCollections.vue";
+import OurShop from "./components/OurShop.vue";
+import CategoryShop from "./components/CategoryShop.vue";
+import ContactUs from "./components/ContactUs.vue";
+import MyJournal from "./components/MyJournal.vue";
+import WhatsApp from "./components/WhatsApp.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     SlidingBannerPromotions,
     NavBar,
@@ -39,7 +39,7 @@ export default {
     WhatsApp,
   },
 };
-</script >
+</script>
 
 <style>
 * {

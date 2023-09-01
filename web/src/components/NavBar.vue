@@ -1,14 +1,13 @@
 <template>
   <div class="navbar">
     <div class="navbar__icon">
-      <img src="../assets/icons/menu.svg" alt="menu icon" class="navbar__menu">
+      <img src="../assets/icons/menu.svg" alt="menu icon" class="navbar__menu" />
     </div>
     <h1>Mar de Cores</h1>
     <div class="navbar__icon">
-      <img src="../assets/icons/search.svg" alt="search icon" class="navbar__search">
-      <img src="../assets/icons/user.png" alt="user icon" class="navbar__user">
+      <img src="../assets/icons/search.svg" alt="search icon" class="navbar__search" />
+      <img src="../assets/icons/user.png" alt="user icon" class="navbar__user" />
     </div>
-
   </div>
 </template>
 
@@ -20,7 +19,7 @@ export default {
 
 <style scoped>
 .navbar {
-  width: 100vw;
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,5 +44,11 @@ h1 {
 
 .navbar__search {
   margin: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    margin-top: 8vh;
+  }
 }
 </style>

@@ -16,7 +16,10 @@ export default {
   data() {
     return {
       offers: [
-        { id: 1, text: 'Comienza la Primavera!🌻 comienza el calor!🏖️ tenes tú bikini de Mar de Cores?👙' },
+        {
+          id: 1,
+          text: 'Comienza la Primavera!🌻 comienza el calor!🏖️ tenes tú bikini de Mar de Cores?👙',
+        },
       ],
     };
   },
@@ -26,7 +29,7 @@ export default {
 <style scoped>
 .banner {
   background-color: var(--arena-dorada);
-  height: 40px;
+  height: 5vh;
   top: 0;
   position: fixed;
   width: 100vw;
@@ -60,6 +63,18 @@ export default {
 
   100% {
     transform: translateX(-120%);
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 7vh;
+  }
+  .banner__offer {
+    font-size: 2rem;
+  }
+  .banner__slider--animate {
+    animation: banner__slide 30s linear infinite;
   }
 }
 </style>
