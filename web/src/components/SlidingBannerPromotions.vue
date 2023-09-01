@@ -68,7 +68,7 @@ export default {
 
 @media (min-width: 768px) {
   .banner {
-    height: 50px;
+    height: 45px;
   }
   .banner__offer {
     font-size: 2rem;
