@@ -68,13 +68,19 @@ export default {
 
 @media (min-width: 768px) {
   .banner {
-    height: 15vh;
+    height: 20vh;
   }
   .banner__offer {
     font-size: 2rem;
   }
   .banner__slider--animate {
     animation: banner__slide 30s linear infinite;
+  }
+}
+
+@media (min-width: 1028px) {
+  .banner {
+    height: 10vh;
   }
 }
 </style>
