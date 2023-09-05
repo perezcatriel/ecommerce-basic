@@ -17,7 +17,7 @@
 
     <div class="rights">
       <p>&copy; {{ currentYear }} Todos los derechos reservados.</p>
-      <p>Creado por <a href="https://www.datacraft.vercel.app" target="_blank">DataCraft</a></p>
+      <p>Creado por <a href="https://www.datacraft.vercel.app/" target="_blank">DataCraft</a></p>
     </div>
   </footer>
 </template>
