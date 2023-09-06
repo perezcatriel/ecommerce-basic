@@ -3,7 +3,7 @@
     <div class="NewCollection-1">
       <div v-for="(item, index) in items_1" :key="index">
         <div class="image">
-          <img :src="item.image" alt="item.name" class="image-1">
+          <img :src="item.image" alt="item.name" class="image-1" />
           <div>
             <h2>{{ item.name }}</h2>
             <p>{{ item.description }}</p>
@@ -16,7 +16,7 @@
       <div class="NewCollection-2">
         <div v-for="(item, index) in items_2" :key="index">
           <div class="image">
-            <img :src="item.image" alt="item.name" class="image-1">
+            <img :src="item.image" alt="item.name" class="image-1" />
             <div>
               <h2>{{ item.name }}</h2>
               <p>{{ item.description }}</p>
@@ -30,10 +30,9 @@
       <div class="NewCollection-3">
         <div v-for="(item, index) in items_3" :key="index">
           <div class="image">
-            <img :src="item.image" alt="item.name" class="image-3">
+            <img :src="item.image" alt="item.name" class="image-3" />
             <h2 class="image-name">{{ item.name }}</h2>
           </div>
-
         </div>
       </div>
     </div>
@@ -49,36 +48,36 @@ export default {
         {
           name: 'Producto 1',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
         {
           name: 'Producto 2',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
         {
           name: 'Producto 3',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
       ],
       items_2: [
         {
           name: 'Producto 4',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
       ],
       items_3: [
         {
           name: 'Producto',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
         {
           name: 'Producto',
           description: 'descripción del producto',
-          image: 'https://picsum.photos/id/100/200/300',
+          image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
       ],
     };
