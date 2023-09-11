@@ -153,19 +153,21 @@ p {
   .combo-image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 60vw;
     height: 90vh;
-    }
+    margin: auto;
+  }
   .image-2 {
     max-width: 40vw;
   }
   .NewCollection-3 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
   }
   .image-3 {
     max-width: 40vw;
-    max-height: 35vh;
+    max-height: 30vh;
     padding: auto;
     margin: 10px auto 0;
   }
