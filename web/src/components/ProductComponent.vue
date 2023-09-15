@@ -1,6 +1,6 @@
 <template>
   <div class="center-container">
-    <h2>Recién llegado</h2>
+    <h2>{{ title }}</h2>
 
     <div class="cards-container">
       <div class="card-row">
@@ -9,7 +9,7 @@
             <div class="image-container">
               <img :src="item.image" :alt="item.name" class="image" />
               <a>
-                <img src="@/assets/icons/shop.png" :alt="item.name" class="icon" />
+                <img :src="iconSrc" :alt="item.name" class="icon" />
               </a>
             </div>
 
@@ -25,7 +25,7 @@
             <div class="image-container">
               <img :src="item.image" :alt="item.name" class="image" />
               <a>
-                <img src="@/assets/icons/shop.png" :alt="item.name" class="icon" />
+                <img :src="iconSrc" :alt="item.name" class="icon" />
               </a>
             </div>
 
@@ -37,40 +37,64 @@
       </div>
     </div>
 
-    <a href="#contact-us"><button>VER TODO</button></a>
+    <a :href="buttonLink"
+      ><button>{{ buttonText }}</button></a
+    >
   </div>
 </template>
 
 <script>
-// import GenericButton from '@/components/GenericButton.vue';
-
 export default {
-  name: 'NewlyArrivedProducts',
+  name: 'ProductComponent',
+  props: {
+    item: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
+    title: {
+      type: String,
+      default: 'Recién llegado',
+    },
+    iconSrc: {
+      type: String,
+      default: '@/assets/icons/shop.png',
+    },
+    buttonLink: {
+      type: String,
+      default: '#contact-us',
+    },
+    buttonText: {
+      type: String,
+      default: 'VER TODO',
+    },
+  },
+
   data() {
     return {
       items: [
         {
           name: 'Producto 1',
           description: 'aqui va la descripcion breve del producto',
-          price: 1000000,
+          price: 2,
           image: 'https://i.ibb.co/447b8SH/ropa-pinza.jpg',
         },
         {
           name: 'Producto 2',
           description: 'aqui va la descripcion breve del producto',
-          price: 1000000,
+          price: 2,
           image: 'https://i.ibb.co/PmcD3zH/ropa-arito-estrellas.jpg',
         },
         {
           name: 'Producto 3',
           description: 'aqui va la descripcion breve del producto',
-          price: 1000000,
+          price: 2,
           image: 'https://i.ibb.co/T2s6jjS/ropa-brazalete.jpg',
         },
         {
           name: 'Producto 4',
           description: 'aqui va la descripcion breve del producto',
-          price: 1000000,
+          price: 2,
           image: 'https://i.ibb.co/56KkQx1/magia-cabeza.jpg',
         },
       ],

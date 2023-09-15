@@ -38,7 +38,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -90,7 +89,8 @@ export default {
 
 <style scoped>
 .NewCollection {
-  margin: 50px auto 0;
+  max-width: 100vw; /* Limita el ancho al tamaño de la ventana */
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 .image {
@@ -102,8 +102,9 @@ export default {
   top: -100px;
 }
 
-.image-1, .image-2 {
-  width: 90vw;
+.image-1, .image-2, .image-3 {
+  max-width: 100%; /* Asegura que las imágenes no se desborden */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 h2,
@@ -115,7 +116,10 @@ p {
 .NewCollection-2 {
   margin-top: 50px;
 }
-
+.combo-image {
+  margin: auto;
+  padding: 20px;
+}
 .NewCollection-3 {
   margin: auto;
   padding: 10px;
@@ -157,19 +161,43 @@ p {
     height: 90vh;
     margin: auto;
   }
+
   .image-2 {
     max-width: 40vw;
   }
   .NewCollection-3 {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
   }
   .image-3 {
-    max-width: 40vw;
+    max-width: 50vw;
     max-height: 30vh;
-    padding: auto;
-    margin: 10px auto 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .combo-image {
+    margin: 80px auto;
+    width: 90vw;
+  }
+.image {
+  max-widthth: 100%;
+  max-height: 100%;
+}
+  .image-2 {
+    max-width: 30vw;
+    max-height: 80vh;
+  }
+
+  .NewCollection-3 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-3 {
+    max-width: 20vw;
+    max-height: 80vh;
   }
 }
 </style>

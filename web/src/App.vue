@@ -2,9 +2,18 @@
   <SlidingBannerPromotions />
   <NavBar />
   <PresentationCarousel />
-  <NewlyArrivedProducts />
+  <ProductComponent />
   <NewCollections />
-  <NewlyArrivedProducts />
+  <ProductComponent
+    :items="[
+      { name: 'Producto A', description: 'Descripción A', price: 500, image: 'urlA' },
+      // ... otros productos ...
+    ]"
+    title="Productos Más Vendidos"
+    iconSrc="@/assets/icons/shop.png"
+    buttonLink="#contact-us"
+    buttonText="VER TODO"
+  />
   <OurShop />
   <CategoryShop />
   <MyJournal />
@@ -16,7 +25,7 @@
 import SlidingBannerPromotions from './components/SlidingBannerPromotions.vue';
 import NavBar from './components/NavBar.vue';
 import PresentationCarousel from './components/PresentationCarousel.vue';
-import NewlyArrivedProducts from './components/NewlyArrivedProducts.vue';
+import ProductComponent from './components/ProductComponent.vue';
 import NewCollections from './components/NewCollections.vue';
 import OurShop from './components/OurShop.vue';
 import CategoryShop from './components/CategoryShop.vue';
@@ -30,7 +39,7 @@ export default {
     SlidingBannerPromotions,
     NavBar,
     PresentationCarousel,
-    NewlyArrivedProducts,
+    ProductComponent,
     NewCollections,
     OurShop,
     CategoryShop,
