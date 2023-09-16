@@ -128,4 +128,26 @@ export default {
 .carousel-next {
     right: 10px;
 }
+
+@media (min-width: 768px) {
+  .carousel-container {
+      width: 50%; /* Ajusta el ancho según tus necesidades */
+      margin: 0 auto;
+  }
+
+  .carousel-slide {
+      padding: 0 20px; /* Añade un poco de espaciado a los lados de cada slide */
+  }
+
+  .carousel img {
+      width: 80vw; /* Ajusta el tamaño de la imagen */
+      max-height: 70vh;
+      margin: 0 auto;
+      object-fit: contain;
+  }
+
+  .carousel-controls {
+      justify-content: space-evenly; /* Centra los botones de control */
+  }
+}
 </style>
