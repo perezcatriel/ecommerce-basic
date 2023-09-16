@@ -89,8 +89,9 @@ export default {
 
 <style scoped>
 .NewCollection {
-  max-width: 100vw; /* Limita el ancho al tamaño de la ventana */
-  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+  max-width: 90vw; /* Limita el ancho al tamaño de la ventana */
+  overflow: hidden; /* Evita el desbordamiento horizontal */
+  margin: auto;
 }
 
 .image {
@@ -102,7 +103,9 @@ export default {
   top: -100px;
 }
 
-.image-1, .image-2, .image-3 {
+.image-1,
+.image-2,
+.image-3 {
   max-width: 100%; /* Asegura que las imágenes no se desborden */
   height: auto; /* Mantiene la proporción de la imagen */
 }
@@ -121,12 +124,12 @@ p {
   padding: 20px;
 }
 .NewCollection-3 {
-  margin: auto;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40vw;
-  min-height: 300px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  max-width: 30vw;
 }
 
 .image-3 {
@@ -148,7 +151,7 @@ p {
     margin: 50px auto 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-gap: 20px;
   }
   .image-1 {
     max-width: 25vw;
@@ -176,28 +179,45 @@ p {
   }
 }
 
+/* ... (resto del código CSS) ... */
+
 @media (min-width: 1024px) {
-  .combo-image {
-    margin: 80px auto;
-    width: 90vw;
+  .NewCollection {
+    width: 100vw;
   }
-.image {
-  max-widthth: 100%;
-  max-height: 100%;
-}
+  .combo-image {
+    display: flex;
+    justify-items: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    width:max-content;
+    /* Espacio entre los elementos hijos */
+  }
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+  }
   .image-2 {
     max-width: 30vw;
+    height: auto;
     max-height: 80vh;
   }
 
   .NewCollection-3 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    overflow: hidden;
+    min-width: 50vw;
+    margin: auto 20px;
   }
 
   .image-3 {
-    max-width: 20vw;
-    max-height: 80vh;
+    max-width: 30vw;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
   }
 }
 </style>

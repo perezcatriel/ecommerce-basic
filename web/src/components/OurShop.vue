@@ -25,7 +25,9 @@ export default {
 <style scoped>
 .image {
   width: 90vw;
+  max-height: 80vh;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 h2,
